@@ -1,3 +1,24 @@
-body {
-    background-color: blue;
+.container {
+    max-width: 390px;
+    height: 100vh;
+    margin: 0 auto;
+}
+
+.bg-1 {
+    color:#fff;
+    background: linear-gradient(-45deg, #ee8432, #ff606c, #edca35);
+    background-size: 400% 400%;
+    animation: colorChange 15s ease infinite;
+}
+
+@keyframes colorChange{
+    0%{
+        background-position: 0% 50%;
+    }
+    50%{
+        background-position: 100% 50%;
+    }
+    100%{
+        background-position: 0% 50%;
+    }
 }

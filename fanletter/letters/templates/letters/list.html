@@ -1,0 +1,14 @@
+{% extends 'letters/layout/base.html' %}
+
+{% block title %}Home - My Site{% endblock %}
+
+{% block content %}
+
+{% for letter in letters %}
+    <div>
+        {{ letter.song.song_title }}
+        {{ letter.letter_title}}
+    </div>
+{% endfor %}
+
+{% endblock %}
