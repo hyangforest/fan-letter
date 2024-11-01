@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>unlucky</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/normalize.css' %}">
+    <link rel="stylesheet" href="{% static 'letters/css/unlucky.css' %}">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="icon" href="{% static 'letters/icons/unlucky_favicon.ico' %}" type="image/x-icon">
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <div class="song-title">unlucky</div>
+            <div class="create-date">01/11/2024 15:10:13</div>
+            <div class="song-group">
+                <div>Love wins all</div>
+                <div>Shopper</div>
+                <div>Bye Summer</div>
+                <div>strawberry moon</div>
+            </div>
+        </header>
+        <main>
+            {% block content %}{% endblock %}
+        </main>
+        <footer>
+            <div class="credit-title">License</div>
+            <div class="credit-content">1.<a href="https://www.flaticon.com/kr/free-icons/" title="클로버 아이콘">클로버 아이콘 제작자: Freepik - Flaticon</a></div>
+            <div class="credit-title">Reffrence</div>
+            <div class="credit-content">1.site</a></div>
+            <div class="credit-title">2024-2024 made by hyngforest.</div>
+        </footer>
+    </div>
+</body>
+
+</html>

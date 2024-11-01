@@ -1,0 +1,416 @@
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic&family=Noto+Sans+KR:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&family=Caveat:wght@400..700&family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Nanum+Gothic&family=Noto+Sans+KR:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&family=Caveat:wght@400..700&family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Nanum+Gothic&family=Noto+Sans+KR:wght@100..900&family=Shadows+Into+Light&display=swap');
+
+:root {
+    --header-height: 9rem;
+    --footer-height: 2.5rem;
+    --base-gap: 1.5rem;
+}
+
+/* list */
+/* layout */
+* { box-sizing: border-box; }
+
+html, body {
+    height: 100%;
+    margin: 0;
+    font-family: "Noto Sans KR", serif;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+body {
+    width: 100%;
+}d
+
+header {
+    width: 100%;
+    height: var(--header-height);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+header div.song-title {
+    font-weight: 900;
+    padding: 1rem 0;
+}
+
+header div.song-group {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem 0;
+}
+
+header div.song-group div {
+    margin: 0 0.2rem;
+}
+
+main {
+    width: 100%;
+    padding: var(--base-gap);
+    flex: 1;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+footer {
+    width: 100%;
+    height: 100%;
+    padding: 1rem;
+}
+
+footer div {
+    margin: 0;
+}
+
+footer div.credit-title {
+    margin-bottom: 0.2rem;
+}
+
+footer div.credit-title:last-child {
+    text-align: center;
+}
+
+footer div.credit-content  {
+    padding-left: 0.2rem;
+    margin-bottom: 0.5rem;
+}
+
+.vertical-gap::before {
+    content: '';
+    margin: var(--base-gap);
+}
+
+.main-tilte {
+    margin-bottom: 0.5rem;
+}
+
+.album-wrap {
+    position: relative;
+    padding: 0.725rem;
+}
+
+.album-info-content,
+.album-info-person,
+.album-info-right {
+    display: flex;
+}
+
+.album-info-person {
+    margin-top: 0.3rem;
+    align-items: center;
+}
+
+.album-info {
+    margin: 0.5rem 0;
+}
+
+.album-info-content {
+    height: 200px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.album-info-left,
+.album-info-right {
+    width: 47%;
+    height: 100%;
+}
+
+.album-info-left {
+    overflow-y: auto;
+}
+
+.album-info-song {
+    margin-bottom: 0.5rem;
+}
+
+.album-info-picture {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    /* width: 100%;
+    height: 100%; */
+}
+
+.album-info-picture img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: block;
+}
+
+.card {
+    width: 100%;
+    margin: 0.5rem auto;
+}
+
+.card-head {
+    margin-bottom: 0.7rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* display: grid;
+    grid-template-columns: 8% 92%;
+     */
+}
+
+.card-body, .content {
+    margin-bottom: 0.7rem;
+}
+
+.card-body {
+    height: 95px;
+}
+
+.title {
+    flex: 1;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.battery span {
+    transform: rotate(270deg);
+}
+
+.content {
+    display: -webkit-box;
+    -webkit-line-clamp: 5;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.card-footer {
+    display: flex;
+    align-items: center;
+}
+/* layout */
+
+/* base style */
+.album-wrap {
+    /* background-color: white; */
+
+}
+
+.album {
+    background-color: #d3d3d3;
+}
+
+/* 모서리 */
+.album-wrap::before,
+.album-wrap::after,
+.album::before,
+.album::after {
+    content: '';
+    position: absolute;
+    width: 1rem;
+    height: 1rem;
+    border: 2px solid black;
+}
+
+/* top-left */
+.album-wrap::before {
+    top: 0;
+    left: 0;
+    border-right: none;
+    border-bottom: none;
+}
+
+/* bottom-right */
+.album-wrap::after {
+    bottom: 0;
+    right: 0;
+    border-left: none;
+    border-top: none;
+}
+
+/* top-right */
+.album::before {
+    top: 0;
+    right: 0;
+    border-left: none;
+    border-bottom: none;
+}
+
+/* bottom-left */
+.album::after {
+    bottom: 0;
+    left: 0;
+    border-right: none;
+    border-top: none;
+}
+/* 모서리 */
+
+/* 앨범 상세 요소 */
+.album-name {
+    font-size: 1.25rem;
+    font-weight: 700;
+}
+
+.text-point {
+   background: linear-gradient(180deg, rgba(255, 255, 255, 0) 80%, #a0fc8d 20%);
+}
+
+.album-date {
+    font-family: "IBM Plex Mono", monospace;
+    font-size: 0.6rem;
+}
+
+.album-info-person {
+    font-size: 0.9rem;
+}
+
+.album-info-person div {
+    padding-right: 0.125rem;
+    margin-right: 0.1rem;
+    font-size: 0.8rem;
+}
+
+.album-info-person span {
+    font-size: 0.6rem;
+    font-weight: 300;
+    margin: 0 0.25rem;
+}
+
+.album-info-song {
+    font-size: 1rem;
+    font-weight: 700;
+}
+
+.album-info-lyrics {
+    font-size: 0.7rem;
+    text-align: center;
+    padding: 0.3rem 0.5rem;
+}
+
+.line {
+    margin: 0.35rem 0;
+}
+
+/* ::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+} */
+/* 앨범 상세 요소 */
+
+.card {   
+    background-color: black;
+    color: white;
+
+    border-radius: 0.7rem;
+    padding: 1rem;
+}
+
+.color-circle {
+    background-color: white;
+    width: 1.5rem;
+    height: 1.5rem;
+    border-radius: 50%;
+}
+
+.text {
+    font-size: 1.2rem;
+}
+
+.lucky-middle {
+   background: linear-gradient(180deg, rgba(255, 255, 255, 0) 80%, #00BFA6 20%);
+
+}
+
+.lucky-low {
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0) 80%, #8E6BBE 20%);
+
+}
+
+.lucky-bottom {
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0) 80%, #FFA726 20%);
+}
+
+.content {
+    font-weight: 300;
+    font-size: 0.9rem;
+}
+
+.date {
+    font-family: "IBM Plex Mono", monospace;
+    font-weight: 200;
+    font-size: 0.7rem;
+    text-align: right;
+}
+
+.battery span {
+    font-size: 2rem !important;
+    background: linear-gradient(to top, #3FCB27, white);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.unlike span {
+    font-size: 1.2rem;
+}
+
+.like span {
+    font-size: 1.0rem;
+}
+
+body {
+    background-color: #d3d3d3
+}
+
+header {
+    background-color: black;
+    color: white;
+}
+
+header div.song-title {
+    font-weight: 900;
+    font-size: 2rem;
+    text-align: center;
+}
+
+header div.song-group div {
+    /* font-family: "Caveat", cursive; */
+    /* font-family: "Amatic SC", sans-serif; */
+    font-family: "Shadows Into Light", cursive;
+    font-size: 0.7rem;
+}
+
+header div.create-date {
+    font-family: "IBM Plex Mono", monospace;
+    font-weight: 300;
+    font-size: 0.5rem;
+    text-align: center;
+}
+
+footer {
+    background-color: black;
+    color: white;
+    font-size: 0.8rem;
+    font-family: "IBM Plex Mono", monospace;
+}
+
+footer div.credit-content {
+    font-size: 0.6rem
+}
+
+footer div.credit-content a {
+    color: white;
+    text-decoration: none;
+}
+
+.main-tilte {
+    font-weight: 600;
+    font-size: 1.2rem;
+}
