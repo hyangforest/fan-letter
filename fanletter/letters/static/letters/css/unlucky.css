@@ -324,17 +324,17 @@ footer div.credit-content  {
     font-size: 1.2rem;
 }
 
-.lucky-middle {
+.lucky-5 {
    background: linear-gradient(180deg, rgba(255, 255, 255, 0) 80%, #00BFA6 20%);
 
 }
 
-.lucky-low {
+.lucky-3 {
     background: linear-gradient(180deg, rgba(255, 255, 255, 0) 80%, #8E6BBE 20%);
 
 }
 
-.lucky-bottom {
+.lucky-0 {
     background: linear-gradient(180deg, rgba(255, 255, 255, 0) 80%, #FFA726 20%);
 }
 
