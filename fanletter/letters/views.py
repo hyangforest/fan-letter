@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from .models import Letter, Song
 
 def letter_list(request):
@@ -7,10 +7,21 @@ def letter_list(request):
     return render(request,"letters/list.html" , {'letters': letters})
 
 def letter_view(request, pk):
-    if pk == 5:
-        return letter_5(request)
+    if pk == 1:
+        return redirect("letters:unlucky_list")
     else:
         return render(request, "letters/letter.html")
 
-def letter_5(request):
+def letter_1(request):
+    letter = Letter.objects.filter(id=1).first()
+
     return render(request, "letters/unlucky.html")
+
+def unlucky_list(request):
+    return render(request, "letters/unlucky.html")
+
+def unlucky_view(request, pk):
+    # if pk == 1:
+    #     return redirect("unlucky_list")
+    # else:
+    return render(request, "letters/unlucky-view.html")
